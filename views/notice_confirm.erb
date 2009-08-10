@@ -1,0 +1,6 @@
+<% content_for :title do %>2ch画像まとめモバイル - 通報確認<% end %>
+<div>この画像を通報してよろしいですか？</div>
+<form action="/notice/send" method="post">
+    <input type="hidden" name="pid" value="<%= @p[:id] %>" />
+    <input type="submit" value="通報する" />
+</form>

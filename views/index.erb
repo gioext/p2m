@@ -1,0 +1,33 @@
+<% content_for :title do %>2ch画像まとめモバイル<% end %>
+<%= partial :info %>
+<%= hr %>
+<%= partial :search %>
+<%= hr %>
+<%= s('666') %><a href="http://tk.mobri.jp/c.php?a=13131&amp;s=13712">エロ娘とSEX友達になろう</a><img src="http://tk.mobri.jp/at.php?a=13131&amp;s=13712" width="1" height="1" border="0" /><br />
+<%= s('666') %><a href="http://tk.mobri.jp/c.php?a=13154&amp;s=13712">人妻とエッチ出会い♪</a><img src="http://tk.mobri.jp/at.php?a=13154&amp;s=13712" width="1" height="1" border="0" /><br />
+<%= hr %>
+<div><%= s %><%= h(@ku ? @ku : 'スレッド') %>の一覧<%= s %></div>
+<div style="text-align:center">
+<a href="http://click.adtune.jp/ad_ck.php?pskey=0n4ota7w&amp;guid=ON"><img src="http://lotate.adtune.jp/ad_img.php?pskey=0n4ota7w&amp;guid=ON" border="0" /></a>
+</div>
+<div style="text-align:right;">
+<%= mobile_page_link(@paginate, "", @k ? "?k=#{u(@k)}" : '') %>
+</div>
+<% @boards.each_with_index do |b, i| %>
+<%= hr %>
+<div<%= ' style="background-color:#ebebff;"' if i % 2 == 0 %>>
+<%= s('666') %><a href="/t/<%= b[:id] %>/1"><%= b[:title] %></a>
+</div>
+<% end %>
+<div style="text-align:right;">
+<div><a href="#top">ページTOP▲</a></div>
+<%= hr %>
+<%= mobile_page_link(@paginate, "", @k ? "?k=#{u(@k)}" : '') %>
+</div>
+<%= hr %>
+<div style="text-align:center">
+<a href="http://adtune.jp/ck.php?psid=12505&amp;csid=208&amp;adid=1096">えっ!?知らなかったの?<br />
+月50万円のお小遣いが<br />
+簡単に手に入る方法！<br />
+</a>
+</div>

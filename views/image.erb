@@ -1,0 +1,13 @@
+<% content_for :title do %>2ch画像まとめモバイル - <%= @board[:title] %><% end %>
+<div><%= s %><%= @board[:title] %><%= s %></div>
+<div style="text-align:center">
+<a href="http://click.adtune.jp/ad_ck.php?pskey=0n4ota7w&amp;guid=ON"><img src="http://lotate.adtune.jp/ad_img.php?pskey=0n4ota7w&amp;guid=ON" border="0" /></a>
+</div>
+<%= hr %>
+<div style="text-align:center;">
+<img src="<%= static("/mobile/#{@board[:thread_id]}/#{@picture[:url]}") %>" alt="img" /><br />
+<a href="/notice/confirm/<%= @picture[:id] %>" rel="nofollow">通報する</a> 
+<%= hr %>
+<a href="http://adtune.jp/ck.php?psid=12505&amp;csid=210&amp;adid=1102"><img src="http://adtune.jp/banner/216_210_1.gif" /><br />
+</a>
+</div>
