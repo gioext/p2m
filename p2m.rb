@@ -1,13 +1,13 @@
 require 'rubygems'
 require 'sinatra'
 require 'sequel'
-require 'lib/helpers'
-require 'lib/kana'
-require 'RMagick'
 require 'nkf'
 require 'logger'
 require 'sinatra/memcache'
 require 'builder'
+require 'lib/helpers'
+require 'lib/kana'
+require 'lib/ad'
 
 get '/:p?' do |p|
   p = (p || 1).to_i
