@@ -60,6 +60,20 @@ get '/i/:pid' do |pid|
   end
 end
 
+get '/l/:pid' do |pid|
+  cache "mimage:#{pid}" do
+    @picture = DB[:pictures].filter(:active => true)[:id => pid]
+    halt erb(:bad) unless @picture
+
+    @board = DB[:boards][:id => @picture[:board_id]]
+    halt erb(:bad) unless @board
+
+    @tid = @board[:thread_id]
+    @path = @picture[:url]
+    erb :large
+  end
+end
+
 get '/notice/confirm/:pid' do |pid|
   @p = DB[:pictures].filter(:id => pid).first
   redirect '/' unless @p

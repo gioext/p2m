@@ -2,14 +2,18 @@
 <% content_for :description do %><%= @board[:title].strip %> P.<%= @p %><% end %>
 <% content_for :title do %><%= @board[:title].strip %> P.<%= @p %><% end %>
 <div><%= s %><%= @board[:title].strip %><%= s %></div>
+<% if production? %>
 <div style="text-align:center">
 <a href="http://click.adtune.jp/ad_ck.php?pskey=0n4ota7w&amp;guid=ON"><img src="http://lotate.adtune.jp/ad_img.php?pskey=0n4ota7w&amp;guid=ON" border="0" /></a>
 </div>
+<% end %>
 <%= hr %>
 <%= mobile_page_link(@paginate, "/t/#{@board[:id]}") %>
+<% if production? %>
 <div style="text-align:center">
 <a href="http://cgi.i-mobile.co.jp/ad_link.aspx?guid=on&amp;asid=14995&amp;pnm=6338&amp;asn=1"><img border="0" src="http://cgi.i-mobile.co.jp/ad_img.aspx?guid=on&amp;asid=14995&amp;pnm=6338&amp;asn=1&amp;asz=0&amp;atp=2&amp;lnk=6666ff&amp;bg=&amp;txt=000000" alt="i-mobile" /></a><br />
 </div>
+<% end %>
 <% @pictures.each_with_index do |p, i| %>
 <%= hr %>
 <div style="text-align:center;<%= 'background-color:#ebebff' if i % 2 == 0 %>">
@@ -22,10 +26,13 @@
 </div>
 <% end %>
 <%= hr %>
+<% if production? %>
 <div style="text-align:center;">
 <a href="http://cgi.i-mobile.co.jp/ad_link.aspx?guid=on&amp;asid=14995&amp;pnm=6338&amp;asn=2"><img border="0" src="http://cgi.i-mobile.co.jp/ad_img.aspx?guid=on&amp;asid=14995&amp;pnm=6338&amp;asn=2&amp;asz=0&amp;atp=2&amp;lnk=6666ff&amp;bg=&amp;txt=000000" alt="i-mobile" /></a><br />
 </div>
+<% end %>
 <%= mobile_page_link(@paginate, "/t/#{@board[:id]}") %>
+<% if production? %>
 <%= hr %>
 <div style="text-align:center">
 <a href="http://click.adtune.jp/ad_ck.php?pskey=0n4ota7w&amp;guid=ON"><img src="http://lotate.adtune.jp/ad_img.php?pskey=0n4ota7w&amp;guid=ON" border="0" /></a><br />
@@ -34,3 +41,4 @@
 ┓┏┓┏┓富くじ<br />
 ┻┗┛┗┛万円☆</a>
 </div>
+<% end %>
