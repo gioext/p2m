@@ -152,6 +152,10 @@ helpers do
     %{<span style="color:##{color}">◆</span>}
   end
 
+  def space(height)
+    %{<div><img src="#{static('/images/1px.gif')}" height="100%" /></div>}
+  end
+
   def last_updated
     DB[:histories].reverse_order(:id).first[:value].gsub('.', '/')
   end
