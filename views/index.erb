@@ -1,14 +1,20 @@
-<% content_for :title do %>2ch画像まとめモバイル<% end %>
+<% content_for :keyword do %>2ch画像まとめモバイル<% end %>
+<% content_for :description do %>トップページ P.<%= @p %><% end %>
+<% content_for :title do %>面白画像が大量！ P.<%= @p %><% end %>
 <%= partial :info %>
+<div style="text-align:center">
+<a href="http://click.adtune.jp/ad_ck.php?pskey=0n4ota7w&amp;guid=ON"><img src="http://lotate.adtune.jp/ad_img.php?pskey=0n4ota7w&amp;guid=ON" border="0" /></a>
+</div>
 <%= hr %>
 <%= partial :search %>
 <%= hr %>
 <div><%= s %><%= h(@ku ? @ku : 'スレッド') %>の一覧<%= s %></div>
-<div style="text-align:center">
-<a href="http://click.adtune.jp/ad_ck.php?pskey=0n4ota7w&amp;guid=ON"><img src="http://lotate.adtune.jp/ad_img.php?pskey=0n4ota7w&amp;guid=ON" border="0" /></a>
-</div>
+<div style="font-size:xx-small">Last Updated:<%= last_updated %></div>
 <div style="text-align:right;">
 <%= mobile_page_link(@paginate, "", @k ? "?k=#{u(@k)}" : '') %>
+</div>
+<div style="text-align:center;">
+<a href="http://cgi.i-mobile.co.jp/ad_link.aspx?guid=on&amp;asid=14995&amp;pnm=7289&amp;asn=1"><img border="0" src="http://cgi.i-mobile.co.jp/ad_img.aspx?guid=on&amp;asid=14995&amp;pnm=7289&amp;asn=1&amp;asz=0&amp;atp=2&amp;lnk=6666ff&amp;bg=&amp;txt=000000" alt="i-mobile" /></a><br />
 </div>
 <% ads(4).each_with_index do |e, i| %>
 <%= hr %>
@@ -21,20 +27,15 @@
 <%= s('666') %><a href="/t/<%= b[:id] %>/1"><%= b[:title] %></a>
 </div>
 <% end %>
-<% ads(4).each_with_index do |e, i| %>
 <%= hr %>
-<div<%= ' style="background-color:#ebebff;"' if i % 2 == 0 %>>
-<%= s('666') %><%= e %></div>
-<% end %>
-<%= hr %>
+<div style="text-align:center;">
+<a href="http://cgi.i-mobile.co.jp/ad_link.aspx?guid=on&amp;asid=14995&amp;pnm=7289&amp;asn=2"><img border="0" src="http://cgi.i-mobile.co.jp/ad_img.aspx?guid=on&amp;asid=14995&amp;pnm=7289&amp;asn=2&amp;asz=0&amp;atp=2&amp;lnk=6666ff&amp;bg=&amp;txt=000000" alt="i-mobile" /></a><br />
+</div>
 <div style="text-align:right;">
 <%= mobile_page_link(@paginate, "", @k ? "?k=#{u(@k)}" : '') %>
 <div><a href="#top">ページTOP▲</a></div>
 </div>
 <%= hr %>
 <div style="text-align:center">
-<a href="http://adtune.jp/ck.php?psid=12505&amp;csid=208&amp;adid=1096">えっ!?知らなかったの?<br />
-月50万円のお小遣いが<br />
-簡単に手に入る方法！<br />
-</a>
+<a href="http://click.adtune.jp/ad_ck.php?pskey=0n4ota7w&amp;guid=ON"><img src="http://lotate.adtune.jp/ad_img.php?pskey=0n4ota7w&amp;guid=ON" border="0" /></a><br />
 </div>

@@ -14,6 +14,7 @@ get '/:p?' do |p|
   p = 1 if p < 1
   k = params[:k]
   cache "mindex:#{p}:#{k}" do
+    @p = p
     ds = DB[:boards].filter(:active => true).order(:updated_at.desc)
 
     unless k.nil? || k.empty?
@@ -33,6 +34,7 @@ get '/t/:id/:p' do |id, p|
   p = (p || 1).to_i
   p = 1 if p < 1
   cache "mthread:#{id}:#{p}" do
+    @p = p
     @board = DB[:boards][:id => id]
     halt erb(:bad) unless @board
 
@@ -134,6 +136,10 @@ helpers do
 
   def s(color ='f86')
     %{<span style="color:##{color}">◆</span>}
+  end
+
+  def last_updated
+    DB[:histories].reverse_order(:id).first[:value].gsub('.', '/')
   end
 end
 

@@ -1,13 +1,13 @@
 <% content_for :keyword do %><%= @board[:title].strip %><% end %>
-<% content_for :description do %><%= @board[:title].strip %> No.<%= @picture[:id] %><% end %>
-<% content_for :title do %><%= @board[:title].strip %> No.<%= @picture[:id] %><% end %>
+<% content_for :description do %><%= @board[:title].strip %> No.<%= @picture[:id] %> 最大化<% end %>
+<% content_for :title do %><%= @board[:title].strip %> No.<%= @picture[:id] %> 最大化<% end %>
 <div><%= s %><%= @board[:title].strip %><%= s %></div>
 <div style="text-align:center">
 <a href="http://click.adtune.jp/ad_ck.php?pskey=0n4ota7w&amp;guid=ON"><img src="http://lotate.adtune.jp/ad_img.php?pskey=0n4ota7w&amp;guid=ON" border="0" /></a>
 </div>
 <%= hr %>
 <div style="text-align:center;">
-<img src="<%= static("/mobile/#{@board[:thread_id]}/#{@picture[:url]}") %>" alt="img" /><br />
+<img src="<%= static("/pics3/#{@board[:thread_id]}/#{@picture[:url]}") %>" alt="img" /><br />
 <%= hr %>
 <a href="http://cgi.i-mobile.co.jp/ad_link.aspx?guid=on&amp;asid=14995&amp;pnm=848&amp;asn=1"><img border="0" src="http://cgi.i-mobile.co.jp/ad_img.aspx?guid=on&amp;asid=14995&amp;pnm=848&amp;asn=1&amp;asz=0&amp;atp=2&amp;lnk=6666ff&amp;bg=&amp;txt=000000" alt="i-mobile" /></a><br />
 <a href="/notice/confirm/<%= @picture[:id] %>" rel="nofollow">通報する</a> 
