@@ -16,7 +16,7 @@
 <% end %>
 <% @pictures.each_with_index do |p, i| %>
 <%= hr %>
-<div style="text-align:center;<%= 'background-color:#ebebff' if i % 2 == 0 %>">
+<div style="text-align:center;<%= 'background-color:#ddd' if i % 2 == 0 %>">
 <a href="/i/<%= p[:id] %>"><img src="<%= static("/thumbs/#{@board[:thread_id]}/#{p[:url]}") %>" /></a>
 <div style="text-align:right;">
 <a href="/i/<%= p[:id] %>">拡大画像</a><br />
@@ -40,5 +40,8 @@
 本日の運試し！<br />
 ┓┏┓┏┓富くじ<br />
 ┻┗┛┗┛万円☆</a>
+</div>
+<div style="text-align:right">
+<a href="#top">ページTOP▲</a>
 </div>
 <% end %>

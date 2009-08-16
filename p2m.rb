@@ -61,7 +61,7 @@ get '/i/:pid' do |pid|
 end
 
 get '/l/:pid' do |pid|
-  cache "mimage:#{pid}" do
+  cache "mlimage:#{pid}" do
     @picture = DB[:pictures].filter(:active => true)[:id => pid]
     halt erb(:bad) unless @picture
 

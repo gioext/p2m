@@ -23,13 +23,13 @@
 <% if production? %>
 <% ads(4).each_with_index do |e, i| %>
 <%= hr %>
-<div<%= ' style="background-color:#ebebff;"' if i % 2 == 0 %>>
+<div<%= ' style="background-color:#ddd;"' if i % 2 == 0 %>>
 <%= s('666') %><%= e %></div>
 <% end %>
 <% end %>
 <% @boards.each_with_index do |b, i| %>
 <%= hr %>
-<div<%= ' style="background-color:#ebebff;"' if i % 2 == 0 %>>
+<div<%= ' style="background-color:#ddd;"' if i % 2 == 0 %>>
 <%= s('666') %><a href="/t/<%= b[:id] %>/1"><%= b[:title] %></a>
 </div>
 <% end %>
@@ -37,7 +37,6 @@
 <% if production? %>
 <div style="text-align:center;">
 <a href="http://cgi.i-mobile.co.jp/ad_link.aspx?guid=on&amp;asid=14995&amp;pnm=7289&amp;asn=2"><img border="0" src="http://cgi.i-mobile.co.jp/ad_img.aspx?guid=on&amp;asid=14995&amp;pnm=7289&amp;asn=2&amp;asz=0&amp;atp=2&amp;lnk=6666ff&amp;bg=&amp;txt=000000" alt="i-mobile" /></a><br />
-</div>
 </div>
 <% end %>
 <div style="text-align:right;">
